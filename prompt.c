@@ -6,8 +6,10 @@
 #include <editline/history.h>
 #endif
 
+#define PROMPT "Lispy Version 0.0.1"
+
 int main(int argc, char** argv){
-    puts("Lispy Version 0.0.1");
+    puts(PROMPT);
     puts("Press ctrl+c to exit");
 
     //never ending loop
