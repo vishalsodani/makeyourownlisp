@@ -1,7 +1,8 @@
 #include <stdio.h>
+#include <stdlib.h>
 
-//static keyword makes this variable local to this file
-static char input[2048];
+#include <editline/readline.h>
+#include <editline/history.h>
 
 int main(int argc, char** argv){
     puts("Lispy Version 0.0.1");
@@ -9,12 +10,13 @@ int main(int argc, char** argv){
 
     //never ending loop
     while(1){
-        fputs("lispy>", stdout);
+        char* input = readline("lispy> ");
 
-        /* read a line of input*/
-        fgets(input, 2048, stdin);
+        add_history(input);
 
-        printf("No you are a %s", input);
+        printf("No you are a %s\n", input);
+
+        free(input);
     }
 
     return 0;
