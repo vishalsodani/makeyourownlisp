@@ -10,7 +10,7 @@
 
 int main(int argc, char** argv){
     puts(PROMPT);
-    puts("Press ctrl+c to exit");
+    puts("Press ctrl+c to exit\n");
 
     //never ending loop
     while(1){
