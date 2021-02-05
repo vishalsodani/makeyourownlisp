@@ -41,3 +41,10 @@ The name given to a set of re-write rules is a **grammar**.
 
 - <stdlib.h> angular brackets searches the system locations
 - angular brackets searches the system locations
+
+FEB 5th
+=============
+
+  struct mpc_ast_t** children; - **DOUBLE POINTER TYPE**
+
+  

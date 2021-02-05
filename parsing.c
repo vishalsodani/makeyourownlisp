@@ -38,6 +38,21 @@ int main(int argc, char** argv){
         mpc_result_t r;
 
         if(mpc_parse("<stdin>", input, Lispy, &r)){
+            mpc_ast_t* a = r.output;
+            printf("Tag: %s\n", a->tag);
+            printf("Contents: %s\n", a->contents);
+            printf("Number of children: %i\n", a->children_num);
+            
+            /* Get First Child */
+            for(int i=0; i < a->children_num; i++ ){
+                mpc_ast_t* c0 = a->children[i];
+                printf(" Tag: %s\n", c0->tag);
+                printf(" Contents: %s\n", c0->contents);
+                printf("Number of children: %i\n",
+                c0->children_num);
+            }
+            
+
             mpc_ast_print(r.output);
             mpc_ast_delete(r.output);
         } else {
